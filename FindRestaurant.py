@@ -44,11 +44,12 @@ def findRestaurant():
 
     # print(chosen_place)
 
-    place_details = gmaps.place(place_id= chosen_place , fields= my_fields)
+    place_details = gmaps.place(place_id= chosen_place , fields= my_fields,language='zh-TW')
 
     chosen_detail = place_details['result']
 
-    chosen_price_level = chosen_detail['price_level'] if 'price_level' in chosen_detail else 0
+    chosen_price_level = chosen_detail['price_level'] if 'price_level' in chosen_detail else "unknown"
+
     chosen_rating = chosen_detail['rating'] if 'rating' in chosen_detail else 0
 
     photo_reference=chosen_detail['photos'][0]['photo_reference']

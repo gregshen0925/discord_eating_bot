@@ -36,7 +36,7 @@ async def on_message(message):
         if len(tmp) == 1:
             await message.channel.send("是要說什麼啦？",delete_after=3)
         else:
-            await message.channel.send(tmp[1],delete_after=3)
+            await message.channel.send(tmp[1])
     if message.content.startswith('菜單'):
             await message.channel.send("抽到就去吃，看三小菜單？",delete_after=3)
 
@@ -53,7 +53,7 @@ async def on_message(message):
             url = result[4],
             colour= discord.Colour.blue()
         )
-        embed.set_footer(text='\n by Joyin Labs')
+        embed.set_footer(text='\n Created by InJoy Labs')
         # embed.set_image(url='')
 
         embed.add_field(name='昂貴程度', value=result[1], inline=False)

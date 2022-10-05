@@ -18,7 +18,7 @@ places = []
 
 
 def findRestaurant():
-    randNum = random.randint(0, 59)
+    randNum = random.randint(0, 79)
 
     if randNum < 20:
         places_results = gmaps.places_nearby(
